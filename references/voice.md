@@ -43,6 +43,14 @@ When the four-act shape does fit, here's what each beat is doing:
 2. **One-line hook right under the title** (works as a subtitle): states
    the twist and the payoff in one sentence, so a reader decides to
    continue in 5 seconds.
+2.5. **A hero image right after the hook, before the first section.** His
+   real published posts always have one here — confirmed from the raw
+   feed, not an assumption. It should distill the post's one headline
+   number or claim (e.g. "330s → 2-3s"), not restate the title as a
+   picture. See `references/images.md` for how to actually produce one
+   (Medium only accepts PNG/JPEG/WEBP/AVIF/GIF — never SVG) and for the
+   1-3 inline diagrams a technical post usually also wants at its key
+   explanatory moments.
 3. **Act 1 — the mystery**: what broke, what it looked like from the
    outside, why the obvious explanations were all wrong. Short, punchy
    sentences. Build genuine suspense — don't reveal the cause yet.
@@ -87,6 +95,24 @@ Whatever shape you pick, close with:
 - Tags: lowercase-hyphenated, specific and plural where natural (e.g.
   `production-issue`, `jvm`, `kubernetes`, `optimization`, `java21`) —
   5-ish per post, mixing the technology and the theme.
+- Never use a Markdown table. Medium's editor has no table block at all,
+  so a table would either paste as broken pipe characters or need manual
+  reformatting either way — write before/after or multi-metric data as
+  plain labeled lines instead (e.g. "New pod ready, per pod: ~330s
+  before, ~2-3s after.").
+- If the underlying work has a cost or efficiency story, make it explicit
+  as its own short section (e.g. "What this is actually worth") rather
+  than leaving it implied by the technical numbers alone — translate the
+  technical win into why it matters operationally (smaller footprint,
+  real autoscaling, cheaper capacity tiers becoming viable). Keep this
+  qualitative and mechanism-based; never quote an internal doc's actual
+  dollar figures without the user explicitly asking for them included.
+- If the post leans on a concept a smart reader outside the user's exact
+  stack might not know (what "warmup" means for a JVM, what a specific
+  protocol or primitive does), give it a short, explicitly skippable
+  primer early ("Skip this if you already know...") rather than assuming
+  the term or diving in jargon-first. This widens the real audience
+  without talking down to the readers who already know it.
 
 Use this as the default voice for every drafted post and its LinkedIn
 teaser, not just a one-off match for whatever prompted this file.

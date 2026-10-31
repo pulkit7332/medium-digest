@@ -19,9 +19,11 @@ files for you to review and post yourself.
 3. Shows you a shortlist (3-7 candidates) with a one-line reason each and
    lets you pick one (or none).
 4. If you pick one: pulls in any internal doc you already wrote about the
-   same work (via Confluence, if that connector's available), sanitizes
-   internal names/tickets/teammates, and drafts a post in your own voice
-   (see below) plus a short LinkedIn teaser — saved locally.
+   same work (via Confluence, if that connector's available) — or, better,
+   the real session transcripts if they're still around, for the texture a
+   polished doc smooths over — sanitizes internal names/tickets/teammates,
+   and drafts a post in your own voice (see below), with a hero image and
+   inline diagrams, plus a short LinkedIn teaser — saved locally.
 
 ## Install
 
@@ -58,6 +60,12 @@ explicitly; pick whatever structure best fits the actual material.
   needed.
 - `references/voice.md` — reusable as a template; regenerate for your own
   voice as above.
+- `references/images.md` — how to generate a hero image + diagrams as PNG
+  (Medium rejects SVG), fully reusable.
+- `references/medium-browser-posting.md` — optional, explicit-request-only
+  technique for having Claude build the draft directly inside your Medium
+  account using Claude in Chrome, instead of you pasting the file in
+  yourself. Never used automatically; never clicks Publish.
 - `state.json`, `drafts/*.md` — personal to each install; gitignored.
 
 ## Weekly automation

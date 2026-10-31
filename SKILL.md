@@ -149,6 +149,12 @@ so the employer name is fine to use; it's internal codenames, ticket IDs,
 team names and teammates that still get anonymized into their business
 function, exactly as his own published posts already do.
 
+**Images are part of the draft, not optional.** Read
+`$SKILL_DIR/references/images.md` for how to produce a hero image plus any
+inline diagrams the post needs, and for the one hard platform constraint
+(Medium rejects SVG outright — only PNG/JPEG/WEBP/AVIF/GIF work). Save
+generated images into `$SKILL_DIR/drafts/images/` alongside the post.
+
 If the session transcripts point at an internal doc the user already wrote
 about this work (a Confluence page, a design doc, a Slack writeup they
 mention), and a tool to fetch it is available, pull it — it's the most
@@ -157,6 +163,17 @@ from fragmented transcript snippets. Treat it as factual raw material to
 reframe for an external audience, not something to summarize as-is: an
 internal doc's job is to inform colleagues, a Medium post's job is to teach
 strangers and make them want to follow the author.
+
+**But don't stop at the polished doc if the real R&D sessions are still
+available.** A summary doc smooths over exactly the texture that makes a
+post feel like a real investigation — the actual crash log, the wrong turn
+that got tried first, the specific diagnostic command that cracked it. If
+the source session transcripts for this candidate are still on disk,
+read them directly (a background agent/fork is the right tool for this if
+the sessions are long, so it doesn't blow your own context) and ground the
+draft in what was actually typed and seen, not just the after-the-fact
+summary. This consistently produces a sharper, more specific post than
+paraphrasing the doc alone.
 
 Write a Markdown file to `$SKILL_DIR/drafts/<YYYY-MM-DD>-<slug>.md` with:
 
@@ -172,6 +189,8 @@ status: draft
 # <Title>
 
 *<One-line subtitle/dek — the hook, not a summary>*
+
+![<alt text describing the headline number/claim>](images/fig0-hero.png)
 
 <Body: an actual narrative with a point of view, not an internal report.
 State the problem in terms any senior engineer recognizes before naming
@@ -220,6 +239,21 @@ their employer's disclosure norms better than this skill does.
 Tell the user the draft's file path. Do not open Medium, do not call any
 API, do not create any account or integration. This skill's job ends at a
 reviewed-and-sanitized local file.
+
+## If the user explicitly asks you to build the draft directly in Medium
+
+The default is always the local file above. But if the user explicitly
+asks you to go further — put it directly into their Medium account, add
+the images for them there, etc. — that's a reasonable request to help
+with, using their real signed-in browser (Claude in Chrome). Read
+`$SKILL_DIR/references/medium-browser-posting.md` first; it covers the
+real gotchas (Medium doesn't auto-convert typed Markdown, its image button
+opens a native file picker this automation can't use, and precise
+click-based text editing is easy to get subtly wrong). This is never
+something to do unprompted, and never something to do from an unattended
+scheduled run — only on a direct, explicit ask in a live conversation. The
+one rule that never changes regardless: never click Publish. That stays
+the user's action, always.
 
 ## Notes for scheduled/unattended runs
 
