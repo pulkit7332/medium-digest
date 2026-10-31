@@ -33,6 +33,13 @@ When the four-act shape does fit, here's what each beat is doing:
 1. **Title**: "We [did X] — [ironic/surprising consequence]" or "We [did
    X]. [twist]." First-person plural. Concrete and specific, often with a
    telling detail (a time of day, an exact setting name, a number).
+   **When the post is meant to teach a named technology or problem (not
+   just recount one incident)**, lead the main title with that
+   problem/technology and the headline win, so a reader scanning titles
+   immediately knows what it's about — and demote the punchy incident hook
+   to a subheading inside the piece, introducing the war-story section,
+   rather than burying the topic under a clever title only insiders would
+   click.
 2. **One-line hook right under the title** (works as a subtitle): states
    the twist and the payoff in one sentence, so a reader decides to
    continue in 5 seconds.
