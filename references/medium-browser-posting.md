@@ -54,6 +54,27 @@ Don't fight this. Instead:
      paragraph in place; block-level formatting applies to the whole
      block.
 
+### Changing the title after the fact is its own trap
+
+Triple-clicking the title and typing a replacement can merge the new
+title text directly into the very next paragraph (the title block and
+the first body paragraph momentarily become one block) — this reproduced
+identically twice in testing, not a one-off fluke. Recovery:
+
+1. Click right at the boundary where the title text ends and the
+   paragraph text begins (zoom in to find it precisely), and press
+   `Return` to re-split them.
+2. This can occasionally leave the title **empty** instead of restored —
+   check with a screenshot before assuming it worked. If it's empty,
+   just click into it and type the title fresh; don't try to undo your
+   way out of it.
+3. Confirm the paragraph below the title is still italicized afterward —
+   the split sometimes drops that formatting even though the text
+   survives, so re-apply `cmd+i` if needed.
+
+Treat any title edit as needing a follow-up screenshot check, not a
+fire-and-forget action.
+
 ### Precision matters more than it looks like it should
 
 Clicking "right after this word" by eyeballed pixel coordinates is
